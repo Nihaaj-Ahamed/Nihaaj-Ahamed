@@ -17,11 +17,9 @@ jobs:
     timeout-minutes: 5
     
     steps:
-      # Step 1: Checkout the repository
       - name: Checkout
         uses: actions/checkout@v3
 
-      # Step 2: Generate the snake
       - name: Generate Snake
         uses: Platane/snk/svg-only@v3
         with:
@@ -32,7 +30,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Step 3: Push the new image (Using a different tool)
       - name: Push to output branch
         uses: ad-m/github-push-action@master
         with:

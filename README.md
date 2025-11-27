@@ -1,6 +1,7 @@
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=20C20E&center=true&vCenter=true&width=435&lines=Hi+there!+I'm+Nihaaj+Ahamed;IT+Undergraduate+%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB;PHP+%26+MySQL+Developer;Welcome+to+my+digital+garden+%F0%9F%8C%B1" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=20C20E&center=true&vCenter=true&width=600&lines=Hi+there!+I'm+Nihaaj+Ahamed;Welcome+to+my+digital+garden+🌱;IT+Undergraduate;Software+Engineer;DevOps" alt="Typing SVG" />
 </div>
+
 
 <h1 align="center">I'm Nihaaj Ahamed <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35px"></h1>
 

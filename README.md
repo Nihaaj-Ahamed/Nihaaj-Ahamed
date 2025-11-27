@@ -26,7 +26,7 @@
 ---
 ### 👨‍💻 About Me
 <p align="center">
-  <h1> MS Nihaaj Ahamed <h1>
+  <b> MS Nihaaj Ahamed<b>
   <b> IT Undergraduate | Solution Creator | Sri Lanka 🇱🇰 </b>
 </p>
 

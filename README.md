@@ -8,6 +8,18 @@
 
 ---
 
+### 👨‍💻 About Me
+<b><h1> MS Nihaaj Ahamed</h1><b>
+<p align="center">
+  <b> IT Undergraduate | Solution Creator | Sri Lanka 🇱🇰 </b>
+</p>
+
+<p align="center">
+  I am passionate about building scalable web applications. Currently focused on mastering <b>DevOps</b> backends and exploring modern JavaScript frameworks.
+</p>
+
+---
+
 <div align="center">
   <a href="http://www.linkedin.com/in/nihaaj-ahamed-911177306">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
@@ -22,17 +34,6 @@
     <img src="https://img.shields.io/badge/Portfolio-20C20E?style=for-the-badge&logo=google-chrome&logoColor=white" />
   </a>
 </div>
-
----
-### 👨‍💻 About Me
-<p align="center">
-  <b> MS Nihaaj Ahamed<b>
-  <b> IT Undergraduate | Solution Creator | Sri Lanka 🇱🇰 </b>
-</p>
-
-<p align="center">
-  I am passionate about building scalable web applications. Currently focused on mastering <b>DevOps</b> backends and exploring modern JavaScript frameworks.
-</p>
 
 ---
 

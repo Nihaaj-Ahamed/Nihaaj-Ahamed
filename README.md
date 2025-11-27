@@ -24,16 +24,9 @@
 </div>
 
 ---
-
-<div align="center">
-  <h3>🏆 Achievements</h3>
-  <img src="https://github-profile-trophy.vercel.app/?username=Nihaaj-Ahamed&theme=radical&no-frame=true&no-bg=true&margin-w=4" />
-</div>
-
----
-
 ### 👨‍💻 About Me
 <p align="center">
+  <h1> MS Nihaaj Ahamed <h1>
   <b> IT Undergraduate | Solution Creator | Sri Lanka 🇱🇰 </b>
 </p>
 
@@ -42,6 +35,15 @@
 </p>
 
 ---
+
+<div align="center">
+  <h3>🏆 Achievements</h3>
+  <img src="https://github-profile-trophy.vercel.app/?username=Nihaaj-Ahamed&theme=radical&no-frame=true&no-bg=true&margin-w=4" />
+</div>
+
+---
+
+
 
 ### 🛠️ Tech Stack & Tools
 <div align="center">

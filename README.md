@@ -2,9 +2,6 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=20C20E&center=true&vCenter=true&width=600&lines=Hi+there!+I'm+Nihaaj+Ahamed;Welcome+to+my+digital+garden+🌱;IT+Undergraduate;Software+Engineer;DevOps" alt="Typing SVG" />
 </div>
 
-
-
----
 <b><h1 align ="center"> MS Nihaaj Ahamed</h1><b>
 <p align="center">
   <b> IT Undergraduate | Solution Creator | Sri Lanka 🇱🇰 </b>

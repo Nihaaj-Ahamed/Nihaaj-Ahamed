@@ -19,9 +19,9 @@
 ---
 
 <div align="center">
-  <img src="https://github.com/[YOUR_USERNAME]/[YOUR_USERNAME]/blob/output/github-contribution-grid-snake.svg" alt="snake output" />
+  <img src="https://github.com/Nihaaj-Ahamed/Nihaaj-Ahamed/blob/output/github-contribution-grid-snake.svg" alt="snake output" />
 </div>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=[YOUR_USERNAME]&show_icons=true&theme=react&hide_border=true&bg_color=0D1117" alt="stats" height="150"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=Nihaaj-Ahamed&show_icons=true&theme=react&hide_border=true&bg_color=0D1117" alt="stats" height="150"/>
 </div>

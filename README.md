@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  I am passionate about building scalable web applications. Currently focused on mastering <b>DevOps</b> backends and exploring modern JavaScript frameworks.
+  I am passionate about building scalable web applications. Currently focused on mastering <b>DevOps</b> backends and exploring modern  frameworks.
 </p>
 
 ---

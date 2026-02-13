@@ -4,7 +4,7 @@
 
 <b><h1 align ="center"> MS Nihaaj Ahamed</h1><b>
 <p align="center">
-  <b> IT Undergraduate | Solution Creator | Sri Lanka 🇱🇰 </b>
+  <b> IT Undergraduate | Solution Creator | AI & Automate Engneer | Sri Lanka 🇱🇰 </b>
 </p>
 
 <p align="center">

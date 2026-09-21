@@ -1,307 +1,142 @@
-    @keyframes spinHolo {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+<!-- Glassmorphism Card Gradient -->
+<linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+  <stop offset="0%" stop-color="#1e293b" stop-opacity="0.7"/>
+  <stop offset="100%" stop-color="#0f172a" stop-opacity="0.5"/>
+</linearGradient>
 
-    @keyframes reverseSpin {
-      0% { transform: rotate(360deg); }
-      100% { transform: rotate(0deg); }
-    }
+<!-- Glowing Neon Gradients -->
+<linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+  <stop offset="0%" stop-color="#00f0ff"/>
+  <stop offset="50%" stop-color="#a855f7"/>
+  <stop offset="100%" stop-color="#3b82f6"/>
+</linearGradient>
 
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 0.4; transform: scale(1); }
-      50% { opacity: 0.85; transform: scale(1.08); }
-    }
+<linearGradient id="neonGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+  <stop offset="0%" stop-color="#22c55e"/>
+  <stop offset="100%" stop-color="#10b981"/>
+</linearGradient>
 
-    @keyframes cyberGrid {
-      0% { background-position: 0 0; }
-      100% { background-position: 50px 50px; }
-    }
+<linearGradient id="avatarGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+  <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8"/>
+  <stop offset="50%" stop-color="#a855f7" stop-opacity="0.5"/>
+  <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.9"/>
+</linearGradient>
 
-    @keyframes textShine {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+<!-- Cyber Grid Pattern -->
+<pattern id="cyberGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+  <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00f0ff" stroke-width="1" stroke-opacity="0.07"/>
+</pattern>
 
-    @keyframes scanline {
-      0% { transform: translateY(-100%); }
-      100% { transform: translateY(1000%); }
-    }
+<!-- Glow Filters -->
+<filter id="glowCyan" x="-30%" y="-30%" width="160%" height="160%">
+  <feGaussianBlur stdDeviation="6" result="blur" />
+  <feMerge>
+    <feMergeNode in="blur" />
+    <feMergeNode in="SourceGraphic" />
+  </feMerge>
+</filter>
 
-    @keyframes meteor {
-      0% { transform: translateX(-200px) translateY(-200px); opacity: 1; }
-      70% { opacity: 1; }
-      100% { transform: translateX(1000px) translateY(1000px); opacity: 0; }
-    }
+<filter id="glowPurple" x="-30%" y="-30%" width="160%" height="160%">
+  <feGaussianBlur stdDeviation="10" result="blur" />
+  <feMerge>
+    <feMergeNode in="blur" />
+    <feMergeNode in="SourceGraphic" />
+  </feMerge>
+</filter>
 
-    .main-wrapper {
-      width: 100%;
-      height: 360px;
-      background: #030712;
-      border-radius: 20px;
-      overflow: hidden;
-      position: relative;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-      perspective: 1200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(0, 240, 255, 0.25);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), inset 0 0 40px rgba(0, 240, 255, 0.15);
-    }
+<filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+  <feDropShadow dx="0" dy="15" stdDeviation="20" flood-color="#000000" flood-opacity="0.8"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#00f0ff" flood-opacity="0.2"/>
+</filter>
 
-    .grid-bg {
-      position: absolute;
-      inset: 0;
-      background-image: 
-        linear-gradient(to right, rgba(0, 240, 255, 0.07) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 240, 255, 0.07) 1px, transparent 1px);
-      background-size: 35px 35px;
-      animation: cyberGrid 20s linear infinite;
-      transform: transform: perspective(500px) rotateX(60deg);
-      transform-origin: center top;
-    }
+<!-- Avatar Clip Path -->
+<clipPath id="avatarCircle">
+  <circle cx="740" cy="160" r="68" />
+</clipPath>
 
-    .ambient-glow-1 {
-      position: absolute;
-      width: 350px;
-      height: 350px;
-      background: radial-gradient(circle, rgba(0, 240, 255, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
-      top: -80px;
-      left: -80px;
-      animation: pulseGlow 6s ease-in-out infinite;
-    }
 
-    .ambient-glow-2 {
-      position: absolute;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(138, 43, 226, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
-      bottom: -100px;
-      right: -100px;
-      animation: pulseGlow 8s ease-in-out infinite 2s;
-    }
+<!-- Cyber Framing Accents -->
+<path d="M 40 60 L 40 44 Q 40 30 54 30 L 80 30" fill="none" stroke="#00f0ff" stroke-width="3" filter="url(#glowCyan)"/>
+<path d="M 820 30 L 846 30 Q 860 30 860 44 L 860 60" fill="none" stroke="#00f0ff" stroke-width="3" filter="url(#glowCyan)"/>
+<path d="M 40 230 L 40 246 Q 40 260 54 260 L 80 260" fill="none" stroke="#a855f7" stroke-width="3" filter="url(#glowPurple)"/>
+<path d="M 860 230 L 860 246 Q 860 260 846 260 L 820 260" fill="none" stroke="#a855f7" stroke-width="3" filter="url(#glowPurple)"/>
 
-    .scan-beam {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, #00f0ff, #8a2be2, transparent);
-      box-shadow: 0 0 15px #00f0ff;
-      animation: scanline 8s ease-in-out infinite;
-      opacity: 0.7;
-    }
+<!-- Left Content Column -->
+<!-- Country Badge -->
+<g transform="translate(70, 58)">
+  <rect x="0" y="0" width="135" height="24" rx="12" fill="rgba(0, 240, 255, 0.1)" stroke="#00f0ff" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="14" cy="12" r="4" fill="#00f0ff" filter="url(#glowCyan)"/>
+  <text x="26" y="16" fill="#00f0ff" font-size="11" font-weight="800" letter-spacing="1.5" class="tech-font">SRI LANKA 🇱🇰</text>
+</g>
 
-    .card-3d {
-      position: relative;
-      z-index: 10;
-      width: 92%;
-      height: 82%;
-      background: rgba(13, 17, 23, 0.65);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 
-        0 30px 60px rgba(0,0,0,0.6),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2),
-        0 0 30px rgba(0, 240, 255, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 45px;
-      transform-style: preserve-3d;
-      animation: float3D 7s ease-in-out infinite;
-    }
+<!-- Primary Name Title -->
+<text x="70" y="122" font-size="36" font-weight="900" fill="#ffffff" class="tech-font" letter-spacing="-0.5">
+  MS Nihaaj Ahamed
+</text>
 
-    .content-left {
-      max-width: 520px;
-      z-index: 2;
-    }
+<!-- Subtitle / Bio -->
+<text x="70" y="152" font-size="15" font-weight="500" fill="#94a3b8" class="tech-font">
+  IT Undergraduate <tspan fill="#00f0ff">|</tspan> <tspan fill="#f8fafc" font-weight="600">Solution Creator</tspan> <tspan fill="#00f0ff">|</tspan> AI &amp; Automation Engineer
+</text>
 
-    .status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
-      background: rgba(0, 240, 255, 0.1);
-      border: 1px solid rgba(0, 240, 255, 0.4);
-      border-radius: 30px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      color: #00f0ff;
-      text-transform: uppercase;
-      box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
-      margin-bottom: 14px;
-    }
+<!-- Tech Badges -->
+<g transform="translate(70, 180)">
+  <!-- Badge 1: DevOps -->
+  <g transform="translate(0, 0)">
+    <rect x="0" y="0" width="110" height="32" rx="8" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(0, 240, 255, 0.35)" stroke-width="1"/>
+    <text x="14" y="20" fill="#38bdf8" font-size="12" font-weight="700" class="tech-font">⚡ DevOps</text>
+  </g>
 
-    .status-dot {
-      width: 7px;
-      height: 7px;
-      background-color: #00f0ff;
-      border-radius: 50%;
-      box-shadow: 0 0 10px #00f0ff;
-      animation: pulseGlow 1.5s infinite;
-    }
+  <!-- Badge 2: Software Engineer -->
+  <g transform="translate(122, 0)">
+    <rect x="0" y="0" width="160" height="32" rx="8" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(168, 85, 247, 0.35)" stroke-width="1"/>
+    <text x="14" y="20" fill="#c084fc" font-size="12" font-weight="700" class="tech-font">⚙️ Software Engineer</text>
+  </g>
 
-    .glitch-title {
-      font-size: 34px;
-      font-weight: 900;
-      margin: 0 0 8px 0;
-      letter-spacing: -0.5px;
-      background: linear-gradient(90deg, #ffffff, #00f0ff, #a855f7, #ffffff);
-      background-size: 300% 300%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: textShine 6s ease infinite;
-      text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    }
+  <!-- Badge 3: AI Architect -->
+  <g transform="translate(294, 0)">
+    <rect x="0" y="0" width="135" height="32" rx="8" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(59, 130, 246, 0.35)" stroke-width="1"/>
+    <text x="14" y="20" fill="#60a5fa" font-size="12" font-weight="700" class="tech-font">🤖 AI Architect</text>
+  </g>
+</g>
 
-    .subtitle {
-      font-size: 15px;
-      color: #94a3b8;
-      margin: 0 0 20px 0;
-      font-weight: 500;
-      line-height: 1.5;
-    }
+<!-- Status Line -->
+<path d="M 70 236 L 460 236" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+<circle cx="70" cy="236" r="3" fill="#22c55e" filter="url(#glowCyan)"/>
+<text x="82" y="240" font-size="11" fill="#64748b" font-weight="600" class="tech-font" letter-spacing="1">
+  SYSTEM STATUS: <tspan fill="#22c55e">ONLINE &amp; BUILDING</tspan>
+</text>
 
-    .subtitle span {
-      color: #38bdf8;
-      font-weight: 600;
-    }
 
-    .tags-container {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+<!-- Rotating HUD Outer Dash Ring -->
+<circle class="rotate-outer" cx="740" cy="160" r="88" fill="none" stroke="url(#cyanPurple)" stroke-width="2.5" stroke-dasharray="14 10 4 10" filter="url(#glowCyan)"/>
 
-    .tag-3d {
-      padding: 7px 15px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 8px;
-      font-size: 12px;
-      font-weight: 600;
-      color: #e2e8f0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
+<!-- Rotating Inner Tech Ring -->
+<circle class="rotate-inner" cx="740" cy="160" r="78" fill="none" stroke="#a855f7" stroke-width="2" stroke-dasharray="35 15 8 15" filter="url(#glowPurple)"/>
 
-    .tag-3d:hover {
-      border-color: #00f0ff;
-      color: #00f0ff;
-      box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
-    }
+<!-- Avatar Holographic Core Background -->
+<circle cx="740" cy="160" r="68" fill="url(#avatarGlow)" opacity="0.25"/>
 
-    /* 3D Hologram Avatar Portal */
-    .avatar-portal {
-      position: relative;
-      width: 170px;
-      height: 170px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+<!-- 3D Vector Cyber Avatar Icon (Guaranteed to render smoothly across all platforms) -->
+<g clip-path="url(#avatarCircle)">
+  <!-- Avatar Silhouette / Headset HUD -->
+  <circle cx="740" cy="160" r="68" fill="#0f172a"/>
+  <path d="M 740 115 A 32 32 0 0 1 772 147 L 772 165 Q 772 175 762 182 L 740 195 L 718 182 Q 708 175 708 165 L 708 147 A 32 32 0 0 1 740 115 Z" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.3"/>
+  
+  <!-- User Head & Shoulders Silhouette -->
+  <circle cx="740" cy="142" r="26" fill="url(#cyanPurple)"/>
+  <path d="M 688 208 C 688 175, 712 172, 740 172 C 768 172, 792 175, 792 208 Z" fill="url(#cyanPurple)"/>
+  
+  <!-- Futuristic Glasses / HUD Visor -->
+  <path d="M 722 138 L 758 138 L 754 146 L 726 146 Z" fill="#00f0ff" filter="url(#glowCyan)"/>
+  <line x1="718" y1="140" x2="762" y2="140" stroke="#ffffff" stroke-width="1.5"/>
+</g>
 
-    .ring-outer {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      border: 2px dashed rgba(0, 240, 255, 0.6);
-      animation: spinHolo 15s linear infinite;
-      box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
-    }
+<!-- Glass Ring Border & Highlight Overlay -->
+<circle cx="740" cy="160" r="68" fill="none" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1.5"/>
+<path d="M 680 130 A 68 68 0 0 1 800 130 Z" fill="rgba(255, 255, 255, 0.08)"/>
 
-    .ring-inner {
-      position: absolute;
-      width: 85%;
-      height: 85%;
-      border-radius: 50%;
-      border: 2px solid transparent;
-      border-top-color: #a855f7;
-      border-bottom-color: #38bdf8;
-      animation: reverseSpin 8s linear infinite;
-    }
-
-    .avatar-frame {
-      position: relative;
-      width: 125px;
-      height: 125px;
-      border-radius: 50%;
-      overflow: hidden;
-      padding: 3px;
-      background: linear-gradient(135deg, #00f0ff, #a855f7);
-      box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
-    }
-
-    .avatar-img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      background: #090d16;
-    }
-
-    .holo-glare {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 50%;
-      background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    /* Floating particles/icons */
-    .tech-orb {
-      position: absolute;
-      border-radius: 50%;
-      background: #00f0ff;
-      box-shadow: 0 0 10px #00f0ff;
-    }
-  </style>
-
-  <div class="main-wrapper">
-    <div class="grid-bg"></div>
-    <div class="ambient-glow-1"></div>
-    <div class="ambient-glow-2"></div>
-    <div class="scan-beam"></div>
-
-    <div class="card-3d">
-      <div class="content-left">
-        <div class="status-badge">
-          <span class="status-dot"></span> SRI LANKA 🇱🇰
-        </div>
-        <h1 class="glitch-title">MS Nihaaj Ahamed</h1>
-        <p class="subtitle">
-          IT Undergraduate | <span>Solution Creator</span> | AI &amp; Automation Engineer
-        </p>
-        <div class="tags-container">
-          <div class="tag-3d">⚡ DevOps</div>
-          <div class="tag-3d">⚙️ Software Engineer</div>
-          <div class="tag-3d">🤖 AI Architect</div>
-        </div>
-      </div>
-
-      <div class="avatar-portal">
-        <div class="ring-outer"></div>
-        <div class="ring-inner"></div>
-        <div class="avatar-frame">
-          <img class="avatar-img" src="https://github.com/Nihaaj-Ahamed.png" alt="MS Nihaaj Ahamed" />
-          <div class="holo-glare"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- Floating Hologram Particles -->
+<circle class="particle-1" cx="690" cy="200" r="2" fill="#00f0ff" filter="url(#glowCyan)"/>
+<circle class="particle-2" cx="785" cy="190" r="2.5" fill="#a855f7" filter="url(#glowPurple)"/>
+<circle class="particle-3" cx="750" cy="85" r="1.8" fill="#00f0ff"/>
